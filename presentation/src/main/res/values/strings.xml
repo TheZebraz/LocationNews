@@ -1,4 +1,5 @@
 <resources>
+  <!--todo исправить названия строк-->
   <!--All-->
   <string name="app_name">LocationNews</string>
   <string name="action_settings">Settings</string>

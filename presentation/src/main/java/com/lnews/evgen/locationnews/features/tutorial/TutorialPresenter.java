@@ -15,7 +15,7 @@ public class TutorialPresenter extends BasePresenter<TutorialView> {
         this.interactor = interactor;
     }
 
-    @Override protected void clearComponent() {
+    @Override protected void clearComponent() {//todo clear
     }
 
     @Override

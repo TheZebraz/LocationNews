@@ -9,6 +9,7 @@ import com.lnews.evgen.locationnews.features.base.BaseView;
 @StateStrategyType(OneExecutionStateStrategy.class)
 interface LaunchView extends BaseActivityView {
 
+    //todo убрать
     void startNextActivity(Intent intent);
 
 }

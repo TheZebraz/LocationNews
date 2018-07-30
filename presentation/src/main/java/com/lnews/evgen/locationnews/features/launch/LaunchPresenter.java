@@ -1,11 +1,13 @@
 package com.lnews.evgen.locationnews.features.launch;
 
 import android.content.Context;
+
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 import com.lnews.evgen.domain.interactors.LaunchInteractor;
 import com.lnews.evgen.locationnews.features.authentication.AuthenticationActivity;
 import com.lnews.evgen.locationnews.features.tutorial.TutorialActvity;
+
 import javax.inject.Inject;
 
 @InjectViewState
@@ -34,11 +36,12 @@ public class LaunchPresenter extends MvpPresenter<LaunchView> {
 
 
     private void showNextActivity() {
+        // TODO: 30.07.2018 переименовать
         if (interactor.isFirstLaunch()) {
             getViewState().startNextActivity(TutorialActvity.getActivityIntent(context));
-        }else if(interactor.isAuth()){
+        } else if (interactor.isAuth()) {
 
-        }else {
+        } else {
             getViewState().startNextActivity(AuthenticationActivity.getActivityIntent(context));
         }
     }

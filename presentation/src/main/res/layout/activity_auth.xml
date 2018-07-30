@@ -6,6 +6,8 @@
     android:background="@drawable/auth_bg"
     >
 
+    <!--todo убрать лишнюю вложенность-->
+
   <FrameLayout
       android:id="@+id/framelayout_auth"
       android:layout_width="match_parent"

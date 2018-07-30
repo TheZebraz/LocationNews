@@ -32,9 +32,11 @@ import io.reactivex.Observable;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+//todo имя активити
 public class TutorialActvity extends BaseActivity implements TutorialView {
     private static final int FIRST_PAGE = 0;
     private static final int ONE_PAGE = 1;
+    // TODO: 30.07.2018 исправить на один лэйаут
     private static final int[] LAYOUTS = {
         R.layout.tutorial_screen_1,
         R.layout.tutorial_screen_2,
@@ -68,6 +70,7 @@ public class TutorialActvity extends BaseActivity implements TutorialView {
         tutorialPresenter.buttonNextPressed(getNextPage(), LAYOUTS.length);
     }
 
+    //todo переместить
     @InjectPresenter
     TutorialPresenter tutorialPresenter;
     @Inject
@@ -89,6 +92,7 @@ public class TutorialActvity extends BaseActivity implements TutorialView {
 
         addBottomDots(FIRST_PAGE);
 
+        //todo вынести в метод
         tutorialPagerAdapter = new TutorialPagerAdapter((LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE), LAYOUTS);
         viewPagerTutorial.setAdapter(tutorialPagerAdapter);
         viewPagerTutorial.addOnPageChangeListener(simpleOnPageChangeListener);
@@ -121,6 +125,7 @@ public class TutorialActvity extends BaseActivity implements TutorialView {
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
+            //todo магическое число
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorsInactive[currentPage]);
             linearLayoutDots.addView(dots[i]);
